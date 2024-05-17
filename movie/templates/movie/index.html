@@ -1,12 +1,29 @@
+{% extends 'movie/_base.html' %}
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Website</title>
+    {% block title %}<title>Main</title> {% endblock %}
 </head>
 <body>
-    <h1>Welcome to the Movie </h1>
-    {{Movie}}
+   
+   {% block content %}
+    
+  
+    
+    <h1>the Movie </h1>
+    {% if movies%}
+        <ul>
+            {% for i in movies %}
+                <li>{{i|title}}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+    <p>No Movie Found.....</p>
+    {% endif %}
+    {% endblock content %}
 </body>
 </html>
