@@ -1,11 +1,14 @@
+{% extends 'movie/_base.html' %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>about</title>
+    {% block title %}<title>About</title> {% endblock %}
 </head>
 <body>
+    {% block content %}
     <h1>Hi</h1>
+    {% endblock content %}
 </body>
 </html>
